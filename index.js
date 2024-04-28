@@ -28,7 +28,7 @@ mongoose.connect(process.env.MongoUrl, { useNewUrlParser: true, useUnifiedTopolo
 
 // Function to create or retrieve the Mongoose model for a given ID
 const getModelForId = id => {
-    let Msg;
+    let Post;
     try {
         Post = mongoose.model(id);
     } catch (error) {
