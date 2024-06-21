@@ -14,9 +14,13 @@ const postSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    image: String,
+    image: {
+        type: String,
+        default: null
+    },
     date: {
-        type: Date
+        type: Date,
+        required: true
     },
     reviews: [reviewSchema]
 });
