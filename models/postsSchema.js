@@ -22,7 +22,15 @@ const postSchema = new mongoose.Schema({
         type: Date,
         required: true
     },
-    reviews: [reviewSchema]
+    reviews: [reviewSchema],
+    likes: {
+        type: Number,
+        default: 0
+    },
+    chosentemplate: {
+        type: Number,
+        default: 0
+    }
 });
 
 module.exports = postSchema;
